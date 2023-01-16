@@ -1,3 +1,7 @@
+import lombok.*;
+
+@Getter
+@Setter
 public class Person {
   private String fullName;
   private String position;
@@ -13,14 +17,6 @@ public class Person {
     this.telephone = telephone;
     this.salary = salary;
     this.age = age;
-  }
-
-  public String getFullName() {
-    return fullName;
-  }
-
-  public void setFullName(String fullName) {
-    this.fullName = fullName;
   }
 
   public void informationAboutPerson() {
@@ -41,6 +37,9 @@ public class Person {
         System.out.print("\n");
       }
     }
+
+    personArray[3].setFullName("Vadimov Vadim");
+    System.out.println(personArray[3].getFullName());
   }
 }
 
