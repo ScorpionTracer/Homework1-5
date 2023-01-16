@@ -2,6 +2,7 @@ import lombok.*;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class Person {
   private String fullName;
   private String position;
@@ -10,14 +11,6 @@ public class Person {
   private int salary;
   private int age;
 
-  public Person(String fullName, String position, String email, String telephone, int salary, int age) {
-    this.fullName = fullName;
-    this.position = position;
-    this.email = email;
-    this.telephone = telephone;
-    this.salary = salary;
-    this.age = age;
-  }
 
   public void informationAboutPerson() {
     System.out.println("ФИО: " + fullName + "\nДолжность: " + position + "\nemail:" + email + "\nТелефон: " + telephone + "\nЗарплата: " + salary + "\nВозвраст: " + age);
