@@ -1,10 +1,10 @@
 public class Person {
-  String fullName;
-  String position;
-  String email;
-  String telephone;
-  int salary;
-  int age;
+  private String fullName;
+  private String position;
+  private String email;
+  private String telephone;
+  private int salary;
+  private int age;
 
   public Person(String fullName, String position, String email, String telephone, int salary, int age) {
     this.fullName = fullName;
@@ -15,12 +15,20 @@ public class Person {
     this.age = age;
   }
 
+  public String getFullName() {
+    return fullName;
+  }
+
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
+  }
+
   public void informationAboutPerson() {
     System.out.println("ФИО: " + fullName + "\nДолжность: " + position + "\nemail:" + email + "\nТелефон: " + telephone + "\nЗарплата: " + salary + "\nВозвраст: " + age);
   }
 
   public static void main(String[] args) {
-    Person[] personArray = new Person[5];
+    var personArray = new Person[5];
     personArray[0] = new Person("Ivanov Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 70000, 30);
     personArray[1] = new Person("Petrov Petr", "Programmer", "pp@mailbox.com", "892352412", 100000, 42);
     personArray[2] = new Person("Sidorov Sidr", "Manager", "ss@mailbox.com", "899312152", 50000, 25);
@@ -30,7 +38,7 @@ public class Person {
     for (int i = 0; i < personArray.length; i++) {
       if (personArray[i].age > 40) {
         personArray[i].informationAboutPerson();
-        System.out.println();
+        System.out.print("\n");
       }
     }
   }
